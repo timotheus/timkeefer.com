@@ -1,0 +1,382 @@
+{% extends "templates/base.html" %}
+
+{% block extrahead %}
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/lightbox.css" media="screen" />
+<!-- / fim dos arquivos utilizados pelo jQuery lightBox plugin -->
+
+<!-- Ativando o jQuery lightBox plugin -->
+<script type="text/javascript">
+$(function() {
+    $('.timeline a').lightBox();
+});
+</script>
+<style type="text/css">
+/* jQuery lightBox plugin - Gallery style */
+#gallery {
+	background-color: #444;
+	padding: 10px;
+	width: 520px;
+}
+#gallery ul { list-style: none; }
+#gallery ul li { display: inline; }
+#gallery ul img {
+	border: 5px solid #3e3e3e;
+	border-width: 5px 5px 20px;
+}
+#gallery ul a:hover img {
+	border: 5px solid #fff;
+	border-width: 5px 5px 20px;
+	color: #fff;
+}
+#gallery ul a:hover { color: #fff; }
+</style>
+{% endblock %}
+
+{% block pageid %}changes{% endblock %}
+
+{% block content %}    
+<p><a href="/images/green.png" title="eBay Green Hub"><img src="/images/green200px.png" alt="" title="" /></a></p>
+<p><a href="/images/jeffbridges.png" title="eBay Celebrity" rel="gallery-timeline"><img src="/images/jeffbridges200px.png" alt="" title="" /></a></p>
+<p><a href="/images/givingtree.png" title="Family Giving Tree"><img src="/images/givingtree200px.png" alt="" title="" /></a></p>
+<p class="marker">2011 &lt;<a href="/images/patagonia.png" title="Patagonia Store Front"><img src="/images/patagonia200px.png" alt="" title="" /></a></p>
+<p><a href="/images/sam.png" title="Samuel Alan Angstrom Keefer"><img src="/images/sam200px.png" alt="" title="" /></a></p>
+<p><a href="/images/bca.png" title="eBay Breast Cancer Charity"><img src="/images/bca200px.png" alt="" title="" /></a></p>
+<p class="marker">2010 &lt;<a href="/images/instantsale.png" title="eBay Instant Sale"><img src="/images/instantsale200px.png" alt="" title="" /></a></p>
+<p><a href="/images/worldofgood.png" title="World Of Good"><img src="/images/worldofgood200px.png" alt="" title="" /></a></p>
+<p class="marker">2008 &lt;<a href="/images/global.png" title="eBay Global Buying Hub"><img src="/images/global200px.png" alt="" title="" /></a></p>
+<p><a href="/images/ordersystem.png" title="Sunflower Online Order"><img src="/images/ordersystem200px.png" alt="" title="" /></a></p>
+<p><a href="/images/ondemand.png" title="Sunflower Ondemand Browser"><img src="/images/ondemand200px.png" alt="" title="" /></a></p>
+<p class="marker">2006 &lt;<a href="/images/gantry.png" title="Gantry Framework"><img src="/images/gantry200px.png" alt="" title="" /></a></p>
+<p class="marker">2001 &lt;<a href="/images/glossary.png" title="American Meterological Glossary"><img src="/images/glossary200px.png" alt="" title="" /></a></p>
+
+<div class="col1">
+    
+<article>
+    {
+        'date' : 'Mon Jul 18 12:14:07 PDT 2011',
+        'note' : ( 
+            ['Co-authored and released eBay Instant Sale platform enabling support for multiple countries',
+             'http://sofortverkauf.ebay.de/' ],
+            ['Released a search back-end using SOLR and Django\'s Haystack' ],
+            ['Released Patagonia/eBay Common Threads commerce site',
+            'http://campaigns.ebay.com/patagonia/'] 
+        ),
+        screenshot : [ {
+            image: '/images/patagonia.png',
+            thumb: '"/images/patagonia200px.png',
+        } ]
+    },
+    {
+        'date' : 'Mon Oct 25 12:14:07 PDT 2010',
+        'note' : (
+            ['Co-authored and released eBay's Instant Sale site',
+             'http://instantsale.ebay.com/'],
+            ['Co-authored and released eBay's charity campaign platform',
+             'http://campaigns.ebay.com/givingworks/']
+        ),
+        screenshot : [ {
+            image: '/images/bca.png',
+            thumb: '"/images/bca200px.png',
+        } ]
+    },
+    {
+        'date' : 'Sat Aug 21 20:04:15 PDT 2010',
+        'note' : (
+            ['<p>Authored and released the Python eBaysdk',
+             'http://code.google.com/p/ebay-sdk-python</a></p>'],
+            ['<p>Co-authored and released the eBay Green site for Canada</p>',
+             '<p>http://green.ebay.ca</a></p>'],
+            ['<p>Authored and released the Perl eBaysdk</p>',
+             '<p>http://code.google.com/p/ebay-api-simple/</a></p>']
+        ),
+    },
+    {
+        'date' : '<p>Mon Aug 9 20:04:15 PDT 2010</p>',
+        'note' : (
+            ['Released a Django stack at eBay',
+             'http://www.ebaylaunchpad.com'],
+        ),
+    },
+    {
+        'date' : '<p>Mon Jul 19 08:00:00 PDT 2010</p>',
+        'note' : (
+            ['<li>Attended OSCON 2010 Conference</li>' ],
+            [ '<li>Attended Portland annual brewers festival</li>' ],
+        ),
+    },
+    {
+        'date' : '<p>Mon Jul 14 14:00:00 PDT 2010</p>',
+        'note' : (
+            ['<li>Co-developed and released eBay giving works micro-site My Favorite Nonprofit</li>'],
+        ),        
+    },
+    {
+        'date' : '<p>Tue Mar 30 12:10:15 PDT 2010</p>',
+        'note' : (
+            ['Baby Samuel was born on March 30th at 12:10am'],
+        ),
+    },
+    {
+        'date' : 'Wed Jun 1-31 18:00:15 PDT 2009',
+        'note' : ( 
+            ['<li>Attended Google App Engine Meetup</li>',
+             '<li>Attended facebook Developer Garage session in Berkeley, CA</li>'],
+        ),
+    },
+    {
+        'date' : 'Wed Jun 1-31 18:00:15 PDT 2009',
+        'note' : (
+            ['<li>Released first Aeon community site, Parents\' Network'],
+            ['<li>Authored and released Google AppEngine project, Aeon Networks'],
+            ['<p>Aeon Networks is an engine that deploys facebook integrated applications that are custom to a niche community. Applications consist for forums, review</p>'],
+        ),
+    },
+    {
+        'date' : 'Sat Aug 21 20:04:15 PDT 2009',
+        'note' : ( 
+            ['<li>Married on May Day, May 1st</li>']
+        ),
+    },
+    {
+        'date' : '<p>Sat Jul 21 20:04:15 PDT 2009</p>',
+        'note' : ( 
+            ['<li>Open Source Conference (OSCON) San Jose, CA</li>'],
+        ),
+    },
+    {
+        'date' : 'Sat Nov 21 20:04:15 PDT 2008',
+        'note' : ( 
+            ['<li><p>Co-authored and released the 2nd iteration of eBay\'s International Marketplace - a cross-border trade venture that targets eBay\'s "unsited" markets. This is an end-to-end eBay buying site that targets 215 countries, localized in 20 languages.</p>',
+             'http://global.ebay.com',
+             'Perl, HTML::Mason, Apache/mod_perl, eBay::API, eBay::API::Simple']
+        ),
+    },
+    {
+        'date' : 'Sat Sept 02 20:04:15 PDT 2008',
+        'note' : ( 
+            ['<li><p>Co-authored and released WorldofGood.com by eBay - a new social venture marketplace that empowers buyers to shop in ways that align with their personal values. This is an end-to-end tailored eBay site that supports buying and selling.',
+             'http://worldofgood.ebay.com',
+             '<p>Perl, HTML::Mason, Apache/mod_perl, eBay::API, eBay::API::Simple</p>']
+        ),
+    },
+    {
+        'date' : '<p>Sat Aug 21 20:04:15 PDT 2008</p>',
+        'note' : ( 
+            ['<li>Open Source Conference (OSCON) Portland Oregon</li>'],
+            ['Contributor to eBay::API - the original eBay SDK for Perl.</p>',
+             'http://search.cpan.org/~tkeefer/eBay-API-0.25/']
+        ),
+    },
+    {
+        'date' : '<p>Mon Nov 01 20:03:15 PDT 2007</p>',
+        'note' : ( 
+            ['<li>Moved to San Jose, CA</li>']
+        ),
+    },
+    {
+        'date' : '<p>Sat Oct 21 20:04:15 PDT 2007</p>',
+        'note' : ( 
+            ['<p>Developed and released a prototype site for marchspot.com, a site built for bands and artists to provide them with an online platform for selling their merchandise.</p>',
+             'Perl, Gantry, Apache/mod_perl, Postgres']
+        ),
+    },
+    {
+        'date' : '<p>Sat Aug 21 20:04:15 PDT 2007</p>',
+        'note' : ( 
+            ['Revsys team member for the 2007 Platforms contest in Nuremberg, Germany.',
+             'http://www.plat-forms.org/2007'],
+            ['<p>Co-author of "Building Applications With Gantry" for Linux Magazine.</p>',
+             'http://www.linux-mag.com/id/3457/'],
+            ['Open Source Conference (OSCON) Portland Oregon'],
+        ),
+    },
+    {
+        'date' : '<p>Mon Nov 29 13:58:25 CST 2006</p>',
+        'note' : ( 
+            ['Authored and released ACH::Builder to CPAN - an open-source tools for Building ACH (Automated Clearing House) file.</p>',
+             'http://search.cpan.org/~tkeefer/ACH-Builder/</a></p>']
+        ),
+    },
+    {
+        'date' : '<p>Mon Nov 01 20:04:15 PDT 2006</p>',
+        'note' : ( 
+            ['Authored and release Sunflower Broadband\'s Video OnDemand site. The site gives Sunflower broadband customers a portal for browsing and interacting with the available OnDemand content.',
+             'http://www.sunflowerbroadband.com/ondemand</a></p>',
+             'Perl, Gantry, Apache/mod_perl, Postgres</p>'],
+        ),
+    },
+    {
+        'date' : '<p>Mon Mar 21 20:04:15 PDT 2006</p>',
+        'note' : ( 
+            ['Authored and released Sunflower Broadband\'s online order site. This application was built with Gantry. The site provides customers the ability to order Sunflower Broadband cable, internet, and telephone services.</p>',
+             '<p>http://www.sunflowerbroadband.com/order',
+             'Perl, Gantry, Apache/mod_perl, Postgres']
+        ),
+    },
+    {
+        'date' : '<p>Mon Mar 21 20:04:15 PDT 2006</p>',
+        'note' : ( 
+            ['Co-authored and released Gantry - an open-source web application framework.',
+             '<p>http://www.usegantry.org'],
+            ['<p>Contributor to Bigtop - a code generation application that targets web application construction for Gantry.</p>'],
+             'http://search.cpan.org/~philcrow/Bigtop/</a></p>'],
+        ),
+    },
+    {
+        'date' : '<p>Sat Aug 21 20:04:15 PDT 2005</p>',
+        'note' : ( 
+            ['Open Source Conference (OSCON) Portland Oregon'],
+        ),
+    },
+    {
+        'date' : '<p>Mon Jul 01 20:04:15 PDT 2004</p>',
+        'note' : ( 
+            ['<p>Co-developed a journal hosting system for Allen Press, Inc. The new system, built using Perl, Oracle and SureSpeed. The Public Library of Science's PLoS Medicine was the first to use this system.</p>',
+             'System overview: article forward linking, reference linking, PubMed Central XML, banner advertisement, e-mail article, article relation, citation exports, media slide-shows, reader responses, reader polls, online quizzes, administration center, access control, pay per view, block of document purchasing, RSS feeds, advanced searching, web user management, icon management, ahead of print publishing and support for supplemental data and a full range of multimedia support.</p>',
+             'http://www.bioone.org',
+             'http://medicine.plosjournals.org',
+             'http://www.asmjournals.org',
+             'http://www.jvetintmed.org',
+             'Linux, Apache, Perl, XML, LibXML, Template Toolkit, Oracle 9i, Oracle interMedia',
+        ),
+    },
+    {
+        'date' : '<p>Mon Aug 21 20:04:15 PDT 2003</p>',
+        'note' : ( 
+            ['Open Source Conference (OSCON) Portland, Oregon',
+             'Building Web Sites with the Template Toolkit - Andy Wardley',
+             '<li>Mastering PostgreSQL Administration - Bruce Momjian</li>',
+             '<li>PostgreSQL Performance Tuning - Bruce Momjian</li>',
+             '<li>XML Schema Languages - Eric van der Llist</li>',
+             '<li>Regular Expression Mastery - Mark-Janson Dominus</li>']
+        ),
+    },
+    {
+        'date' : '<p>Mon Jul 01 20:04:15 PDT 2003</p>',
+        'note' : ( 
+            ['Released Public Library of Science Online Journal Sites. Development for the Public Library began in July launched on October 13, 2003. A year later we launched PLoS Medicine.</p>',
+             'http://www.plosjournals.org',
+             'http://biology.plosjournals.org',
+             'http://medicine.plosjournals.org']
+        ),
+    },
+    {
+        'date' : '<p>Mon Jun 01 20:04:15 PDT 2003</p>',
+        'note' : ( 
+            ['JCDL 2003 Conference, Open Archives Initiative Protocol for Metadata Harvesting, Houston Texas.']
+        ),
+    },
+    {
+        'date' : '<p>Mon Jul 19 20:04:15 PDT 2002</p>',
+        'note' : ( 
+            ['Open Source Conference (OSCON) San Diego, CA',
+             'Linux System Administration - Joshua Jensen',
+             '<li>AxKit Document Delivery - Matt Sergeant</li>',
+             '<li>Apache 2.0 Performance Analysis/Tuning - Justin Erenkrantz, Aaron Bannert</li>',
+             '<li>Advanced DBI - Tim Bunce</li>',
+             '<li>Perl and XML - Kip Hampton</li>']
+        ),
+    },
+    {
+        'date' : '<p>Mon Jan 01 20:04:15 PDT 2001</p>',
+        'note' : ( 
+            ['Authored and released COUNTER compliant site usage statistics for the online publishing sites hosted by Allen Press, Inc.</p>',
+             'http://reports.allenpress.com',
+             'Perl, Apache mod_perl, Oracle 9i, Microsoft Access</p>']
+            ['Co-authored a publish portal site called TurnStyle - a pre-editing tool for the editorial office. It is intended to clean up documents by searching for and replacing common misspellings, removing unnecessary formatting and applying basic, repetitive styles.</p>
+             '<p>http://turnstyle.allenpress.com</a></p>',
+             'Linux, Perl, Omnimark, Apache mod_perl, PostgreSQL']
+            ['Co-authored and released Meeting ASSYSTant (Abstract Submission System) - a software system used to organize the collection of abstracts for papers to be presented at society meetings. Abstracts are submitted, reviewed, edited and accepted all through a digital workflow, interfaced via a web browser. Collected abstracts can be published online, printed as a program, and/or delivered in a database file for offline processing.</p>
+             '<p>Linux, Perl, Apache mod_perl, PostgreSQL</p>']
+            ['Authored a d released Allen OnTrack - a site that offers publishing clients the ability to monitor the manuscript production progress on an article-by-article basis.</p>',
+             'http://tracking.allenpress.com (username: demo password: demo)</p>',
+             'Linux, Perl, Template Toolkit, Apache mod_perl, PostgreSQL</p>',]
+            ['Authored and released the Glossary site for the American Meteorological Society of America. This is the electronic version of the second edition of the AMS Glossary with more than 12,000 terms.</p>',
+             'http://amsglossary.allenpress.com</a></p>',
+             'Linux, Perl, XML, XPath, Apache mod_perl, PostgreSQL']
+        ),
+    },
+    {
+        'date' : '<p>Mon Feb 01 20:04:15 PDT 2001</p>',
+        'note' : ( 
+            ['<li>Attended Oracle SQL &amp; SQL *PLUS, Chicago</li>'],
+            ['<li>Attended Crossref Technical Workshop, New York</li>'],
+        ),
+    },
+    {
+        'date' : '<p>Mon Feb 01 20:04:15 PDT 2001</p>',
+        'note' : ( 
+            ['<li>Attended Omnimark Training, Ontario Canada part 2</li>'],
+            ['<li>Attended Omnimark Training, Ontario Canada part 1</li>'],
+        ),
+    },
+
+]
+
+
+
+<article>
+        </ol>
+    </li>
+</ul>
+</article>
+
+  
+    <article>
+        </li>
+    </ul>
+    </article>
+
+
+    <article>
+    </ul>
+    </article>
+
+    <article>
+            </ol>
+        </li>
+    </ul>
+    </article>
+
+    <article>
+      </li>
+    </ul>
+    </article>
+  
+
+    <article>
+    </ul>
+    </article>
+
+    <article>
+    </ul>
+    </article>
+
+    </div>
+
+<div class="col2">
+    <!-- div class="markers">
+    
+    </div -->
+    <aside class="timeline">
+        <span class="marker">2012 &lt;</span>
+        <p><a href="/images/green.png" title="eBay Green Hub"><img src="/images/green200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/jeffbridges.png" title="eBay Celebrity" rel="gallery-timeline"><img src="/images/jeffbridges200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/givingtree.png" title="Family Giving Tree"><img src="/images/givingtree200px.png" alt="" title="" /></a></p>
+        <p class="marker">2011 &lt;<a href="/images/patagonia.png" title="Patagonia Store Front"><img src="/images/patagonia200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/sam.png" title="Samuel Alan Angstrom Keefer"><img src="/images/sam200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/bca.png" title="eBay Breast Cancer Charity"><img src="/images/bca200px.png" alt="" title="" /></a></p>
+        <p class="marker">2010 &lt;<a href="/images/instantsale.png" title="eBay Instant Sale"><img src="/images/instantsale200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/worldofgood.png" title="World Of Good"><img src="/images/worldofgood200px.png" alt="" title="" /></a></p>
+        <p class="marker">2008 &lt;<a href="/images/global.png" title="eBay Global Buying Hub"><img src="/images/global200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/ordersystem.png" title="Sunflower Online Order"><img src="/images/ordersystem200px.png" alt="" title="" /></a></p>
+        <p><a href="/images/ondemand.png" title="Sunflower Ondemand Browser"><img src="/images/ondemand200px.png" alt="" title="" /></a></p>
+        <p class="marker">2006 &lt;<a href="/images/gantry.png" title="Gantry Framework"><img src="/images/gantry200px.png" alt="" title="" /></a></p>
+        <p class="marker">2001 &lt;<a href="/images/glossary.png" title="American Meterological Glossary"><img src="/images/glossary200px.png" alt="" title="" /></a></p>
+
+    </aside>    
+
+</div>
+{% endblock %}

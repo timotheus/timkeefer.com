@@ -1,0 +1,469 @@
+
+body {
+    font: 400 19px/23px "Ubuntu Mono";
+    margin: 0px auto 0px auto;
+    width: 960px;
+    color: #555;
+
+}
+
+a:link { color: #d59c11 }
+a:visited { color: #aaa164 }
+
+/* changes */
+#changes .timeline {
+    border-left: 6px solid #555;
+    margin-top: 25px;
+}
+
+#changes .timeline .marker {
+    font-size: 25px;
+    margin-left: -77px;
+    
+}
+
+#changes .timeline .year2003:before {
+    content: "2003 <";
+}
+#changes .timeline .year2003 img {
+    margin-left: 16px !important;
+}
+
+#changes .timeline p:first-of-type {
+    margin-top: -25px;
+}
+
+#changes .col2 img {
+    box-shadow: 1px 9px 6px #999999;
+    margin-left: 13px;
+    width: 140px;
+}
+
+#changes .col1 {
+    width: 570px;
+    float: left;
+    margin-right: 80px;
+}
+
+#changes .col2 {
+    width: 230px;
+    float: left;
+    
+}
+
+#changes #tile2 {
+    opacity: 0.7;
+}    
+    
+#changes #tile2 .details {
+    margin-left: 0;
+    position: relative;
+    margin-top: -19px;
+}
+
+/* builds */
+#builds #tile3 {
+    opacity: 0.7;
+}    
+    
+#builds #tile3 .details {
+    margin-left: 0;
+    position: relative;
+    margin-top: -19px;
+}
+
+#changes div.col1 article>p:first-of-type {
+    font-weight: bold;
+}
+
+/* shapes */
+#shapes #tile4 {
+    opacity: 0.7;
+}    
+    
+#shapes #tile4 .details {
+    margin-left: 0;
+    position: relative;
+    margin-top: -19px;
+}
+
+/* opensource */
+#opensource .col1 {
+    width: 600px;
+}
+
+#opensource #tile3 {
+    opacity: 0.7;
+}    
+    
+#opensource #tile3 .details {
+    margin-left: 0;
+    position: relative;
+    margin-top: -19px;
+}
+
+#subheader {
+    margin: 30px 0 0 0;
+    text-align: center;
+    width: 100%;
+}
+
+/*
+ * 
+ * STANDARD BUTTONS
+ * 
+ */
+
+.button {
+    color: black;
+    font-size: 150%;
+    margin-right: 1.1em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.button a.nav {
+    background: #D59C11;
+    border: 2px solid black;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    color: black;
+    margin: 0;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+.button a.selected, .button a:focus {
+    box-shadow: 0.15em 0.15em 0 #000000;
+    margin-left: -0.15em;
+    margin-right: 0.15em;
+    margin-top: -0.15em;
+    outline: medium none;
+}
+
+.button a.nav:hover {
+    box-shadow: 0.15em 0.15em 0 #000000;
+    margin-left: -0.15em;
+    margin-right: 0.15em;
+    margin-top: -0.15em;
+}
+
+.button a.nav:active {
+    box-shadow: -0.1em -0.1em 0 #000000;
+    margin-left: 0.1em;
+    margin-right: -0.1em;
+    margin-top: 0.1em;
+}
+
+/*
+ *  HEADER
+ */
+
+#header {
+    margin-top: 5px;
+}
+
+#header .tile:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#header .details {
+    left: 0;
+    color: #000;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-left: -200px;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+}
+
+#header .tile:hover .details {
+    margin-left: 0;
+    position: relative;
+    margin-top: -19px;
+}
+ 
+#header .tile {
+    -moz-box-shadow: 3px 3px 3px #aaaaaa;
+    -webkit-box-shadow: 3px 3px 3px #aaaaaa;
+    box-shadow: 3px 3px 3px #aaaaaa;
+    margin-right: 40px;
+}
+
+#header #tile1 {
+    background-image: url("/images/headshot.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 120px auto;
+    border: 5px solid #555;
+    border-radius: 20px 20px 20px 20px;
+    height: 120px;
+    width: 120px;
+    float: left;
+}
+
+#header #tile2 {
+    background-image: url("/images/pines.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 620px auto;
+    border: 5px solid #555;
+    border-radius: 20px 20px 20px 20px;
+    height: 120px;
+    width: 120px;
+    float: left;    
+}
+
+
+#header #tile3 {
+    background-image: url("/images/pines.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 620px auto;
+    border: 5px solid #555;
+    border-radius: 20px 20px 20px 20px;
+    height: 120px;
+    width: 120px;
+    float: left;    
+}
+
+#header #tile4 {
+    background-image: url("/images/pines.jpg");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 620px auto;
+    border: 5px solid #555;
+    border-radius: 20px 20px 20px 20px;
+    height: 120px;
+    width: 120px;
+    float: left;    
+}
+
+#header #tile5 {
+    background-image: url("/images/pines.jpg");
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 620px auto;
+    border: 5px solid #555;
+    border-radius: 20px 20px 20px 20px;
+    height: 120px;
+    width: 120px;
+    float: left;    
+}
+
+#header #connect {
+    border-top: 0px solid #000000;
+    width: 65px;
+    margin-top: 60px;
+    float: left;
+}
+
+/*
+ * 
+ * JELLYFISH
+ * 
+ */
+.jellyfish #strings {
+    position: relative;
+    left: -24px;
+}
+
+.jellyfish #splash {
+    background-image: url("/images/splash.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 600px auto;
+    border-left: 10px solid #000000;
+    border-radius: 290px 290px 0 0;
+    border-right: 10px solid #000000;
+    border-top: 10px solid #000000;
+    height: 268px;
+    left: 160px;
+    margin-top: -140px;
+    position: relative;
+    top: 200px;
+    width: 525px;
+}
+
+.jellyfish #splash2 {
+    background-image: url("/images/splash.jpg");
+    border-radius: 0px 0px 40px 40px;
+
+    border-top: 10px solid #000000;
+    border-left: 10px solid #000000;
+    border-right: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 600px auto;
+    height: 100px;
+    left: 160px;
+    margin-top: 220px;
+    position: relative;
+    top: -20px;
+    width: 525px;
+}
+
+.jellyfish #string1 {
+    border-left: 15px solid #000000;
+    border-radius: 0 0 0 553px;
+    height: 425px;
+    left: 295px;
+    margin-top: -16px;
+    position: relative;
+    top: -23px;
+    width: 600px;
+}
+.jellyfish #string2 {
+    border-left: 15px solid #000000;
+    border-radius: 0 0 0 353px;
+    height: 425px;
+    left: 403px;
+    margin-top: -441px;
+    position: relative;
+    top: -26px;
+    width: 600px;
+}
+.jellyfish #string3 {
+    border-left: 15px solid #000000;
+    border-radius: 0 0 0 401px;
+    height: 473px;
+    left: 502px;
+    margin-top: -441px;
+    position: relative;
+    top: -30px;
+    width: 600px;
+}
+.jellyfish #string4 {
+    border-left: 15px solid #000000;
+    border-radius: 0 0 0 301px;
+    height: 481px;
+    left: 601px;
+    margin-top: -489px;
+    position: relative;
+    top: -32px;
+    width: 600px;
+}
+
+
+
+.jellyfish hr#one {
+    border: 6px solid #000;
+    margin-top: 200px;
+    left: -10px;
+    position: relative;
+    width: 620px;
+}
+
+.jellyfish hr#two {
+    border: 6px solid #000;
+    margin-top: 200px;
+    left: -10px;
+    position: relative;
+    width: 620px;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari and Chrome */
+    -o-transform: rotate(90deg); /* Opera */
+    -moz-transform: rotate(90deg); /* Firefox */
+    
+    
+    transform: skew(90deg,20deg);
+    -ms-transform: skew(90deg,20deg); /* IE 9 */
+    -webkit-transform: skew(90deg,20deg); /* Safari and Chrome */
+    -o-transform: skew(90deg,20deg); /* Opera */
+    -moz-transform: skew(90deg,20deg); /* Firefox */
+
+}
+
+/*
+ * 
+ * DOG
+ * 
+ */
+
+.dog { 
+    margin-bottom: 100px;
+}
+.dog #splash {
+    background-image: url("/images/pines.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 450px auto;
+    border-left: 10px solid #000000;
+    border-radius: 30px 30px 0 0;
+    border-right: 10px solid #000000;
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+    height: 175px;
+    left: 601px;
+    margin-top: -51px;
+    position: relative;
+    top: 169px;
+    width: 173px;
+}
+
+.dog #splash2 {
+    background-image: url("/images/pines.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 450px auto;
+    border-top: 10px solid #000000;
+    border-bottom: 10px solid #000000;
+    border-left: 10px solid #000000;
+    border-radius: 0 0 30px 30px;
+    border-right: 10px solid #000000;
+    height: 164px;
+    left: 291px;
+    margin-top: -189px;
+    position: relative;
+    top: 333px;
+    width: 300px;
+}
+
+.dog #tail {
+    border-left: 15px solid #000000;
+    border-radius: 500px 0 0 0;
+    height: 225px;
+    left: -90px;
+    margin-top: -204px;
+    position: relative;
+    top: -33px;
+    width: 524px;
+    z-index: -1;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+    -o-transform: rotate(-90deg); /* Opera */
+    -moz-transform: rotate(-90deg); /* Firefox */
+    
+}   
+
+.dog #string1 {
+    border-right: 15px solid #000000;
+    border-radius: 0 0 100px 0;
+    height: 225px;
+    left: 295px;
+    margin-top: -16px;
+    position: relative;
+    top: -26px;
+    width: 600px;
+}
+.dog #string2 {
+    border-right: 15px solid #000000;
+    border-radius: 0 0 100px 0;
+    height: 225px;
+    left: 463px;
+    margin-top: -441px;
+    position: relative;
+    top: 171px;
+    width: 600px;
+}
+
+.dog #legs {
+    left: -536px;
+    position: relative;
+    top: 315px;}
+
