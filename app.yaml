@@ -1,0 +1,26 @@
+application: tkeefer-main
+version: 6
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /images
+  static_dir: images
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+  
+- url: /.*
+  script: main.app
+
+libraries:
+- name: jinja2
+  version: latest
