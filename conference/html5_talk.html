@@ -1,0 +1,110 @@
+ls
+<!--
+HTML5/MOBILE IDE: http://firt.mobi/material/
+
+<html>  / <body> tags are optional
+
+Viewport to set mobile size (effects  text size, etc)
+<meta name="viewport" content="width=device-width">
+
+Performance tools: (still not quite good)
+stevesouders.com/mobileperf
+blaze.io
+
+"Who killed my Battery: analyzing mobile browser energy consumption"
+
+Inline CSS, JS - local storage. Home page should be just one html request (ideally)
+
+Audio / Video API : avoid for now
+
+Adding app bookmark to home screen,
+    link rel=apple-touch-icon size=80x80
+    apple-touch-icon-precomposed
+
+Pixel Size: design for 320px 
+240px  320px 480px
+  .75  1     1.5
+
+alert(window.devicePixelRatio || window.webkitDevicePixelRatio)
+
+Inline SVG support on iOS, Android, IE9
+
+Inline Images using DataURI (base64 encoded iamge):
+-->
+
+<img id="picture">
+
+<script>
+var dataPNG = "iVBORw0KGgoAAAANSUhEUgAAAEYAAAARBAMAAACSi8f4AAAAA3NCSVQICAjb4U/gAAAAGFBMVEX///////8AAACpqanMzMxmZmaHhoQ/Pz9kt3AEAAAACHRSTlMA/////////9XKVDIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAAFnRFWHRDcmVhdGlvbiBUaW1lADEyLzExLzA5uegApgAAAQNJREFUKJGVkUFTwyAQhfMXXiH1LA3hDMTeSVDPidW7WnMvkxn/vo+MsamX6s7wgOy3O29JgetR/I2Rdy8B8HIcAyhj8PLIr0dsuYlDF8i8KWWC/BRKaVCUTaJmkhcDuNOHLVCaJg6VfJY6JivqGJHEjn00q3tpsGcfd0KuuGdx2+fsmSl3m2r2k2gGg30i434xSMlmht0YbR+EflAU71dMW89zzWcy2W61eF6YssK5j3vlII81Lj0vzOKHaXCuSz8334ybgC2bkdlUK6ZeMVvTdMM0M0IL3fmQskbD08LA8YHDzGDw9Nyn7Hziuv1hsH/PltCQi9770MmsXFaGf/z3q/EFatlL/IFsBmgAAAAASUVORK5CYII=";
+
+document.getElementById("picture").src="data:image/png;base64," + dataPNG;
+
+</script>
+
+<!-- 
+Editable Content:
+-->
+
+<section id="editable" contenteditable>
+    <h1>My title</h1>
+    <ul>
+        <li>JavaScript
+        <li>Python
+        <li>VBScript
+    </ul>
+</section>
+
+<!-- 
+app cache example: http://apps.ft.com/ftwebapp/
+
+full screen bookmark tool: http://cubiq.org/
+
+Workers & JSON
+-->
+
+<script>
+  // Your code here
+  var worker = new Worker("res/worker.js");
+  worker.onmessage = function (event) {
+      alert(event.data);
+  }
+
+  var stringObj = JSON.stringify({ name: "value"});
+  var object = JSON.parse(stringObj);
+
+</script>
+
+<!--
+mobilehtml5.org
+
+
+Storage (session or local) -
+5M max
+'session' is not ideal, especially on iOS
+-->
+
+<script>
+function save() {
+       
+    localStorage.setItem('name', "max");
+}
+
+function load() {
+    alert(localStorage.getItem('name'));
+}
+</script>
+
+<a href="javascript:save()">Save</a>
+<a href="javascript:load()">Load</a>
+
+<!--
+Touch Event:
+-->
+<script>
+    document.addEventLitener('touchstart', function(e) {
+        alert(e.touches.length);
+    })
+</script>
+
+
+
