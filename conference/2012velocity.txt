@@ -1,0 +1,130 @@
+Optimzing Web
+by Brian Mc...
+
+https://www.ssllabs.com/ssltest/
+
++ flush chunks to the browser
++ blockers to watch for: document.write() 
++ speculative loaders
+  - browser's effecient resource downloading
+  - can speculate on anything defined in js or script tags
+  
++ frames
+  - each have an independent parsers
+  - http://googlecode.blogspot.com/2011/03/your-web-half-second-sooner.html
+ 
++ Google's critical path explorer
+
++ avoid css import
+  - doc.write
+  - use @font-face wisely
+  - use script based DOM node insertion sparingly
+  - move serialized resource fetches outside into iframes
+  - declare resources directly in the html, take advantage of teh speculative loader
+  - inline images judiciously
+  - SPDY server push ??
+  - put above the folder content higher up in the html
+  - webpagetest.org
+
+
+Taming the mobile beast
+by Google folks ...
+
++ HTTP Pipeline
++ YSlow Mobile bookmarklet
++ JDrop
++ window.performance a recent addition
++ Use GA Site Speed page load performances
++ look into SPDY for https traffic
++ chrome memory tools
+
+Puppet
+by Luke Kanies
+
+90-minute Mobile Optimization
+by
+
++ Chrome Remote Debugger (ICS)
++ TCP connections ~100ml
++ concurrency (4 iOS, 6 android)
++ too many round trips
++ 3rd party calls
+
+Oreilly's Site
+
+* 23 second render time
+
+1. add keep-alives 
+2. add compression
+
+* increase performance by 5 seconds
+
+3. Use a CDN for resources
+
+* saves 2 seconds
+
+MobileFEO
+4. colsolidate resources (images, css, js)
+5. images compression
+6. minification (js, css)
+7. local storage
+
+* saves 4 seconds
+
+More FEO (deferrals)
+8. move 3rd party calls to the end
+
+* saves 4 seconds
+
+Mobile caching
+? where do we put it
+? what's the size of the cache
+
+More img deferrals for adaptive version
+
+
+Tuesday Keynotes
+
+Facebook Scale
+by Jay Parkih
+
+Bootcamp
+fabricator (open sourced)
+perflab
+gatekeeper - wire on/off
+claspin - heatmap, drill down graphs
+
+John Snow - http://en.wikipedia.org/wiki/John_Snow_%28physician%29
+
+http://prerender-test.appspot.com/
+
+edgar - forcasting tool
+http archive - http://httparchive.org
+"how complex systems fail" ... a must read
+
+
+SPDY
+by 
+
++ TLS / Header compression / 
+
+
+Twitter
+by...
+
+Iago - load simulation tool (on github)
+Zipkin - graph tool
+
+CSS3
++ "prefix-free"
++ scroller bookmarklet andy edinborough
++ chrome canary (rendering & painting)
+:wq
+
+
+
+
+
+
+
+

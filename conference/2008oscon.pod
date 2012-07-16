@@ -1,0 +1,252 @@
+=head1 Summary
+
+=head2 Python in 3 hours
+
+Steve Holden
+
+Intro to Python; basic syntax information and OO information. Also talked about
+how to migrate from 2 to 3, but using a compiler flag to enable v3 warnings.
+
+TODO: upgrade python on laptop 
+
+=head2 Intro to Django
+
+Jacob Kaplan-Moss
+
+Building web apps with Django. Highlighted the admin tool, orm, and the 
+Django template language.
+
+TODO: install Django and mod_wsgi on laptop and build some django apps.
+
+=head2 Perl Worst Practices
+
+Damian Conway
+
+He walked us through the selfGol.pl perl script, which is his "Game of Life"
+program written in obfuscated Perl. Ouch. Head hurts.
+
+=head2 Mark Shuttleworth
+
+Mark Shuttleworth tells his life story, at least the parts around his space 
+travel and Ubuntu.
+
+=head2 Robert Lefkowitz
+
+r0ml rants about development process and boils all of them down to the original
+6 principles create by ?? in 1000 A.D.
+
+=head2 Damian Conway
+
+Makes my head hurt again with his positronic variable theory.
+
+=head2 Building Compliers with Parrot Toolkit
+
+Patrick Michaud
+
+Fantastic! create you own grammar easily which is how perl 6 is being built.
+
+=head2 Perl 5.10
+
+What's new in 5.10? See notes from session.
+
+=head2 Perl 6 update
+
+Larry Wall and Damian Conway
+
+Moving right along with perl 6 development. Larry explains the minute details 
+about the perl 6 features.
+
+=head2 Facebook caching 
+
+Lucas Nealan
+
+Memcached, APC, CDN, Globals
+
+=head2 Landscape, Ubuntu management
+
+Steve George, Shuttleworth
+
+It's like RHN, but with more features. Works exclusively with Ubuntu for now.
+There's a possibility the custom back-ends for the client code can be written. 
+The client is open-source.
+
+=head2 Barely Legal XXX
+
+Jos Boumans
+
+Talks about how to combat malicious modules, i.e. Acme::**
+
+=head2 Nate Torkington
+
+Talks about his interactions with his New Zealand school system and his
+macbook donations to the school.
+
+=head2 Python Eggs
+
+Called zc.buildout and very much like ExtUtils/CPAN, but very limited. This 
+is not the preferred method in the Py community.
+
+=head2 Perl Code Profiling
+
+Tim Bunce talked about Devel::NYTProf. Very cool for profiling perl programs. 
+Only missing memory allocation/usage profiling.
+
+=head2 Log4perl
+
+Mike Schilli
+
+Talks about Log4perl. This provides rich logging and will likely be in core 
+soon. Based of off Log4j, the Java logger.
+
+=head2 Perl Lightning Talks
+
+Filled with fun and all sorts of useful bits of knowledge.
+
+=head2 State of the Onion
+
+Larry gives us the state of the Onion in a different fashion this year. 
+No jokes, well one joke, while Larry takes deep into the perl 6 grammar
+language. 
+
+=head2 Perl and Parrot Myths 
+
+Tim Bunce 
+
+Note, next DBI release will not support perl 5.6. He says get off of it.
+There has been considerable speed enhancements.
+
+=head2 Twilight Perl
+
+Conway shows us the nasty perl, again.
+
+=cut
+
+=head1 Python in 3 hours
+
+Steve Holden - holdenweb.com
+Chairman of the Python Foundation
+
+=head2 Summary
+
+=head2 Notes
+
+Python in a Nutshell - Alex Martelli
+PEP 8 - Python style guide
+
+Dynamic Typed - var names are not typed, but values are typed
+"batteries included"
+Jython - Use python to interface w/ java classes
+
+a = b = c = 'assigned to all'
+
+?? if ( 1 > 2 and 2 > 1 ) 
+?? s[m:n]
+s = 'Tim Keefer'
+s[-1] 'r'
+s[0]  'T'
+
+2.0 - Unicode Support
+
+u"my unicode string"
+r"my raw string" - raw string using literals (similiar to perl's single quotes )
+
+s.upper()
+
+?? tuples
+?? d1[(1,2,3)] = 'tuple'
+
+"binding to names" instead of assigning values to variables
+l.extend = push( @a, 'val' )
+
+l[2:3] = [] ; deletes from list/array
+
+x = [ 'oscon' ]
+x+= [ '2008 ]
+
+[ 'oscon', '2008' ]
+
+pass, del, break, continue, global, 
+?? exec - use as last resort
+
+print is going away in Py 3.0
+
+can run py 2.6 with a py 3 flag to produce warnings
+
+=head 2 Compound Statements
+
+if not mylst:
+    print "list is empty"
+
+py has no case or switch statement
+
+use the elif whichs is an else if
+
+could 
+
+if i < 10 :
+    continue
+
+also be 
+if i < 10 : continue
+
+if __name__ == '__main__':
+    run_test_code()
+
+introspection? Does py have a can( 'method' ) call?
+    
+=cut
+
+
+=head1 Perl 5.010
+
+say "This";
+
+$amount //= $default; # checks for defined instead of true
+
+# binds the value first time only
+sub read_line {
+    state $lines_left = 10;
+    $lines_left--;
+}
+
+=head2 smart matching
+
+~~ , if these 2 things match
+
+combo of the eq and ==
+$foo ~~ undef
+$foo ~~ @array
+$foo ~~ %hash
+$foo ~~ $code
+
+=head2 Switch
+
+uses smart matching
+
+given( $foo ) {
+
+    when( undef ) { }
+    when( $test_1 ) {}
+    default {}
+    
+}
+
+SmartMatch::Sugar
+AutoBox
+
+=item undefined warning now tells you the var name of vars
+
+=head2 inside-out objects
+
+Hash::Util::FieldHash
+
+=head2 Lexical topic ($_)
+
+=head2 Named Captures
+
+s/(?<name>\w+)/\g{name}/
+say $+{ name };
+
+=head2 flexible regex
+
+=cut

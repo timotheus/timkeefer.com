@@ -1,0 +1,280 @@
+
+/* 
+ *
+ * Spine talk - ?? from twitter
+
+    styloapp.com
+    Don't store state or data in the DOM
+    Subscribe to and trigger Pubsub events
+    
+    chrome - click pause twice to enable debug on error
+    chrome - memory leak debugger
+    modify dom when not attached to hte tree
+    requestAnimationFrame()
+    
+ 
+ *
+ */
+
+
+/*
+ *
+ *  How to deploy node.js and not get fired
+ *
+ *
+
+
+seanhess.github.com
+testing : deploynode.tk
+rackspace, linode, joyent
+http://www.slideshare.net/embwbam/how-to-deploy-node-to-production
+
+define a package.js and use the following to install deps,
+> npm init 
+> npm install
+
+upstart - system start and respawning node serer
+monitor - via montastic or something similar
+* http://howtonode.org/deploying-node-upstart-monit
+
+deployment automation - parallel ssh or node control
+use cluster to run on all cores
+
+Heroku - staging env - bootstrapping smaller projects
+scale -
+
+
+*/
+
+
+/*
+ *
+ *
+ * Hybrid / Web mobile - Ryan Stewart - Seattle
+ * "Mobile Design Pattern Gallery" - O'Reilly book
+ *
+ * JQuery bad stuff - Size, Performance, Does a lot of DOM generation behined the scenes
+ *  Ugly - Looks like iOS, tough to visually customize, not created for building mobile apps (mobile websites)
+ *  Hard - css work, use Themeroller (gives a headstart)
+ *
+ *  Tips - use custom fonts & icons, 
+ 
+ *
+ Phone Gap
+
+ 'mobileinit' custom jquery mobile by user-agent
+ 'deviceready' event
+  PhoneGap Build - links to github
+
+
+
+  /*
+
+  Node.js talk tom@jetpacksfordinosaurs.com 
+
+  - email him for slides & ebay contact
+  - http://ofps.oreilly.com/titles/9781449398583/
+  - example arch
+
+  user <-> node (front-end) <-> db
+                            <-> node (logging) <-> disk
+
+  - move non user-facing work outside of the main loop
+  - cluster (multi cpu use) is a must use eg. require('cluster');
+  - unbundle SSL (stud) could speed up
+  - apache traffic server (not sure what this is? some type of proxy/lb)
+  - npm (eg. npm install express) - node package management
+  - node-inspector debugger - run along side of the node process
+  - upstart or forever - a wrapper command that will run the node process
+
+  ** sublime editor 
+  http://www.sublimetext.com/blog/articles/sublime-text-2-beta
+
+
+  */
+  // Helloworld
+
+  var http = require('http');
+
+  http.createServer(function (request, response) {
+      response.writeHead(200, {'Content-Type': 'text/html'});
+
+      if (request.headers['user-agent']) {
+          response.write('I\'m Learning Node\n' 
+              + request.headers['user-agent']);
+      }
+      response.end('');
+
+  }).listen(8000);
+
+  console.log('Server running at http://127.0.0.1:8000/');
+
+  // Simple app
+
+  var express = require('express');
+  var app = express.createServer();
+  app.use(express.cookieParser());
+
+  app.get('/', function(req, res) {
+      var page = '';
+      if (req.query.page) {
+          page = req.query.page;
+      }
+      res.send('root ' + page);
+  });
+
+  app.get('/products/:page', function(req, res) {
+      res.send('products ' + req.params.page);
+  });
+
+  app.get('/old/?', function(req, res) {
+      res.redirect('/new/');
+  });
+
+  app.get('/new/?', function(req, res) {
+      res.cookie('rememberme', 'yes');
+      res.send('new');
+  });
+
+  app.listen(3000);
+
+  // Simple chat server
+
+  var net = require('net');
+
+  var server = net.createServer();
+
+  server.listen(8001);
+
+  var connections = [];
+
+  server.on('connection', function(socket) {
+      socket.write('Hello');
+      console.log('new connection');
+
+      connections.push(socket);
+
+      socket.on('data', function(data) {
+          for (var i=0; i<connections.length;i++) {
+              // if( connections[i].writable) {
+              connections[i].write(data);
+              //}
+          }
+      });
+
+      socket.on('close', function() {
+          connections.splice(connections.indexOf(socket),1));
+      });
+  });
+
+
+  ls
+  <!--
+  HTML5/MOBILE IDE: http://firt.mobi/material/
+
+  <html>  / <body> tags are optional
+
+  Viewport to set mobile size (effects  text size, etc)
+  <meta name="viewport" content="width=device-width">
+
+  Performance tools: (still not quite good)
+  stevesouders.com/mobileperf
+  blaze.io
+
+  "Who killed my Battery: analyzing mobile browser energy consumption"
+
+  Inline CSS, JS - local storage. Home page should be just one html request (ideally)
+
+  Audio / Video API : avoid for now
+
+  Adding app bookmark to home screen,
+      link rel=apple-touch-icon size=80x80
+      apple-touch-icon-precomposed
+
+  Pixel Size: design for 320px 
+  240px  320px 480px
+    .75  1     1.5
+
+  alert(window.devicePixelRatio || window.webkitDevicePixelRatio)
+
+  Inline SVG support on iOS, Android, IE9
+
+  Inline Images using DataURI (base64 encoded iamge):
+  -->
+
+  <img id="picture">
+
+  <script>
+  var dataPNG = "iVBORw0KGgoAAAANSUhEUgAAAEYAAAARBAMAAACSi8f4AAAAA3NCSVQICAjb4U/gAAAAGFBMVEX///////8AAACpqanMzMxmZmaHhoQ/Pz9kt3AEAAAACHRSTlMA/////////9XKVDIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzQGstOgAAAAFnRFWHRDcmVhdGlvbiBUaW1lADEyLzExLzA5uegApgAAAQNJREFUKJGVkUFTwyAQhfMXXiH1LA3hDMTeSVDPidW7WnMvkxn/vo+MsamX6s7wgOy3O29JgetR/I2Rdy8B8HIcAyhj8PLIr0dsuYlDF8i8KWWC/BRKaVCUTaJmkhcDuNOHLVCaJg6VfJY6JivqGJHEjn00q3tpsGcfd0KuuGdx2+fsmSl3m2r2k2gGg30i434xSMlmht0YbR+EflAU71dMW89zzWcy2W61eF6YssK5j3vlII81Lj0vzOKHaXCuSz8334ybgC2bkdlUK6ZeMVvTdMM0M0IL3fmQskbD08LA8YHDzGDw9Nyn7Hziuv1hsH/PltCQi9770MmsXFaGf/z3q/EFatlL/IFsBmgAAAAASUVORK5CYII=";
+
+  document.getElementById("picture").src="data:image/png;base64," + dataPNG;
+
+  </script>
+
+  <!-- 
+  Editable Content:
+  -->
+
+  <section id="editable" contenteditable>
+      <h1>My title</h1>
+      <ul>
+          <li>JavaScript
+          <li>Python
+          <li>VBScript
+      </ul>
+  </section>
+
+  <!-- 
+  app cache example: http://apps.ft.com/ftwebapp/
+
+  full screen bookmark tool: http://cubiq.org/
+
+  Workers & JSON
+  -->
+
+  <script>
+    // Your code here
+    var worker = new Worker("res/worker.js");
+    worker.onmessage = function (event) {
+        alert(event.data);
+    }
+
+    var stringObj = JSON.stringify({ name: "value"});
+    var object = JSON.parse(stringObj);
+
+  </script>
+
+  <!--
+  mobilehtml5.org
+
+
+  Storage (session or local) -
+  5M max
+  'session' is not ideal, especially on iOS
+  -->
+
+  <script>
+  function save() {
+
+      localStorage.setItem('name', "max");
+  }
+
+  function load() {
+      alert(localStorage.getItem('name'));
+  }
+  </script>
+
+  <a href="javascript:save()">Save</a>
+  <a href="javascript:load()">Load</a>
+
+  <!--
+  Touch Event:
+  -->
+  <script>
+      document.addEventLitener('touchstart', function(e) {
+          alert(e.touches.length);
+      })
+  </script>
+
+
+

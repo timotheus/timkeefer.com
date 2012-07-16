@@ -1,0 +1,75 @@
+
+2 spearkers switching at ramdom intervals
+==========================================
+
+PhoneGap -- service that turns your web app into a naative phone app
+
+Titanium - open-source equal to Adobe AIR
+
+missing from an "open web platform" idea
+
+- home
+- docs
+- dashboard
+- roadmap
+
+pixelperfect - mockup
+firebug plugins
+
+ie8 added dev tools
+safari now has dev tools
+chrome - no dev tools, open json api, multi process, plain js debugger
+
+The tools below use Canvas, JS rendering engine
+
+Bespin - open web tools suite
+
+* accessible from anywhere
+* simple to use, like Textmate
+* wicked fast, no typing lag, etc
+* collaborative coding
+* integrated command-line, like vi
+* "self-hosted" env, like Emacs
+
+Thunderhead - toolkit for grid-base layouts
+
+Open Web Tools Directory, hosted by Mozilla - lanunching soon
+
+
+
+Scala, integrated into the JVM
+
+* statically typed
+* concurrency - threading
+* Immutable data structures
+* type inference ( detect most variable types )
+* first-class  functions ( python's Lambda )
+* traits ( Ruby's modules - classes that contain other OO - 
+  similiar to multiple inheritance
+* pattern matching
+* XML literals and query methods
+* case classes, properties, existential types, implicit conversions,
+  lazy evaluation, parser combinatiors, monads, annotations
+
+
+Cons:
+* complexity
+
+Pros:
+* queuing system
+  - ruby isn't good a long running, memory intense processes
+* api test suite
+
+(thrift - inter services communications)
+
+SCALA community:
+
+http://www.scala-lang.org/
+
+editor, IDEA + most others
+
+JavaRebel -- auto-compiles, allows for agile development
+
+Web App Framework -- Lift
+Config system - Configgy
+CPAN equal - Scalax, Scalaz, all java libraries

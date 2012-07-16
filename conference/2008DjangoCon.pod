@@ -1,0 +1,82 @@
+
+=head1 DjangoCon
+
+Google Cafeteria, 9:30am
+
+talks,
+
+Django on Jython, Sun 2:25
+
+Sat 2:25 Inside the ORM or Reusable Apps?
+
+Google App Engine
+.5G of space limit
+fs is readonly
+no sockets or sub processes
+
+supports image scaling, sending mail
+no receiving mail (yet)
+
+has a datastore and memcache 
+memcache call under a mill second
+datastore built on Bigtable
+no joins? 
+
+upcoming: batch jobs, more langs, large file uploads and downloads,
+pay-as-you-go, more capacity
+
+not supported from Django:
+modesl, orm, admin interface, unit tests, i18n (?)
+
+look into Google App Engine Helper of Django
+
+Demo App:
+app.yaml - app meta
+main.py  - boilerplate
+settings.py - django config: 90% boilerplate
+urls.py - django top-level url dispatch (standard dispatch)
+
+app/
+- models.py - uses google models instead
+templates/
+
+GoogleAppEngineLauncher
+
+=head1 Reusable Apps w/ Django
+
+James Bennett 
+
+look into User Registration app by James Bennett
+"in the beginning there was the command-line"
+
+get_model()
+reverse look ups
+use managers - used with models i.e. get_top_rated()
+
+=head1 geodjango
+
+Geodetic, line, poly, linear, etc
+http://geodjango.org/doc/install.html
+
+
+shape file .shp zcat
+GeoIP
+no transactions with geospacial on mysql
+
+=head Mike Beaker, Flickr 
+
+=head1 Matt Ramm
+
+look into wsgi middleware wsgi.org
+Django Dependancy Graphs -- interesting graph 
+
+django locationtracking
+
+lincolnloop.com
+image integration with snipshots
+Gondola CMS
+
+TODO: use glassfish to run the jython WAR file
+
+dkp 
+

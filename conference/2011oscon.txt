@@ -1,0 +1,239 @@
+HTML5:
+- http://bit.ly/3for5OSCON
+
+Javascript:
+- jsc cli tool
+- node.js for json webservices
+- bookmarklets (could be used for handpicking green items)
+
+Perl:
+- use 5.14.1 (Perlbrew could help with this)
+  name function args func myfunc($var1, $var2)
+  //= is the same as if defined
+  state variable
+  given-when
+  for line-start/line-end use \A \Z instead of ^ and $  
+  ~~ smart match
+  IPC::Sytem:::Simple qw(system capture)
+    capture() is ``
+  regular expression named captures 
+
+- Try::Tiny - try catch
+- use Carp; croak instead of die
+- App::perlbrew
+- module-starter
+
+Perl Plack (Tatsuhiko Miyagawa)
+
+- Starman - webserver ***
+- Dancer - simple framework that can leverage Starman & Plack
+- Carton - versioned perl lib installs (grab from github)
+
+  Twiggy - async webserver
+  Feersum - super fast async
+  fastpass
+
+  - cpamn --installdeps .
+  DPAN, Shipwright
+
+- Plack::Builder
+  ServerStatus::Lite
+  Runtime
+  ErrorDocument
+
+- blog.plackperl.org
+
+Python:
+- python3 is here and several python flags (python -3) will
+  help migrate py2 code to py3
+- as soon as django has a py3 port we can switch
+
+- Unicode is a table - a number to a string
+- encoding is taking the unicode value and putting it into bytes
+- decoding is going from a string of bytes to a unicode value
+
+
+Django Worst and Best (Jacob Kaplan-Moss):
+- https://github.com/etianen/django-reversion
+- use multiple settings files
+- do not subclass models
+- collect data granularly
+
+
+Read the docs - Eric Holscher http://readthedocs.org/
+
+- Site Architecture 
+  Varnish -> nginx -> Gunicorn
+  Haystack & Solr (512M+)
+  Chef (ericholscher.com/tag/chef-series)
+  Nagios & Munin
+  Upstart - init.d equivalent on ubuntu
+  CofeeScript - using to build a API layer
+
+- Docs are updates using a Git post-commit hook
+- Docs are in Sphinx format
+- Docs are versioned
+
+
+Presentation Akido - Damian Conway
+
+* you're here for the audience
+
+7 simple rules
+
+Be...
+
+1. competent
+- talk about actual experiences
+- if you don't know about it, don't talk about it
+2. passionate
+- talk about what you care about it
+- be excited - Tim Bunce, quiet yet passionate
+- tip - be upfront about how dull something may be
+3. entertaining
+- entertaining trumps information
+- in 30 minutes all you can do is give an "overview"
+- give the audience a simple structure that they can
+  walk away with
+- present in a way that it comes across as this is "simple"
+  "easy to understand", attainable to the audience
+- build the basic ideas, analogies to the audience - "scaffolding"
+- comprehensible, resonant, memorable = entertaining
+- tell a story
+4. prepared
+- 20 hours of work per 1 hour of delivery
+- ask yourself "what could I say?" instead of "what should I say?"
+- then prune all but 5 points, these become the chapters
+- bucket the rest of the items into the 5 points
+- find a narrative that connects the 5 points
+5. stylish
+- style is the delivery method for the content, so, style
+  must be greater than content
+- no more than 5 bullets, 5 words
+6. engaging
+7. yourself
+
+
+Sessions Day 1
+
+Javascript is Everywhere - Stoyan Stefanov
+
+cli - jsc, rhino, node.js
+
+sudo ln /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc /bin/jsc
+
+node.js used to create a webservice
+bookmarklets -
+browser extensions - cfx tool
+photoshop scripting with js 
+
+Perl 5.14 - Richardo Signes
+
+each now takes references
+
+Python 3, The Next Generation - 
+
+"print" is becoming a function i.e. print( 'me!' )
+all strings are unicode by default
+new mutable bytesarray
+
+* class MyClass(object):
+except ValueError as e:
+raise ValueError(e)
+single int type
+
+Plack - Tuschibo M
+
+Starman - webserver
+Twiggy - async webserver
+Feersum - super fast async
+fastpass
+
+cpamn --installdeps .
+DPAN, Shipwright
+Carton - versioned perl lib installs (grab from github)
+
+Plack::Builder
+ServerStatus::Lite
+Runtime
+ErrorDocument
+
+blog.plackperl.org
+Dancer
+
+Django Worst and Best -
+
+https://github.com/etianen/django-reversion
+use multiple settings files
+do not subclass models
+collect data granularly
+
+Perl 6 - Damian Conway
+
+sub myfun(&block) is export {
+
+}
+
+Perl Best Practices - Jacinta
+
+use 5.14.1
+//= is the same as if defined
+state variable
+given-when
+~~ smart match
+IPC::Sytem:::Simple qw(system capture) 
+  - capture() is ``
+
+Try::Tiny - try catch
+use Carp; croak instead of die
+App::perlbrew
+module-starter
+func nom($var1, $var2)
+method get()
+
+\A start of line 
+\Z end of line
+named captures - just like pyton
+
+Read the docs - Eric
+
+Sphinx format
+ericholscher.com/tag/chef-series
+
+Varnish -> nginx -> Gunicorn
+
+Haystack & Solr (512M+)
+
+Chef
+
+Nagios & Munin
+
+Upstart - init.d equivelent on ubuntu
+
+CofeeScript - using to build a API layer
+
+CLI tool
+
+Build Bot
+
+"bitrot"
+
+Slow Loris attack
+
+under BSD 
+
+https://github.com/rtfd/readthedocs.org
+
+HTML5 Mobile (PhoneGap)
+
+Awesome!
+
+https://build.phonegap.com/
+
+
+
+
+
+
+
+

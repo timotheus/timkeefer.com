@@ -1,0 +1,77 @@
+Day 1 - Android Dev with the SDK
+
+Dalvik - VM for Android apps 
+  * licensing the JVM is difficult
+  * Custom built Dalivk is more efficient on a mobile device 
+  * small  town in Iceland
+  
+APK - application package
+  1. dalvik exe
+  2. resources (video, sound clips, graphics, native code)
+  3. native libs
+  
+  * must be signed (self-signed)
+  
+  java ( standard edition, enterprise, mobile )
+  - removed UI from standard java
+  
+  Java SE + AWT/Swing + Android API
+
+* can use any public java SE package  
+
+android (command-line tool for dev)
+
+Activities - i.e. web page
+ states:
+  1. running
+  2. paused (sleeping)
+  3. stopped
+  
+
+Intents
+
+Service
+
+Content Provider - a way to share data between apps (CRUD)
+
+Broadcast Receivers - event/intent messaging
+
+
+UI --- 2 approaches
+
+1. Swing
+2. XML
+
+
+install API demos
+
+
+==Adapters (like pagination)
+
+webkit (svg, html5)
+
+Permissions are managed via manifest file
+
+droid draw or Google app inventor
+
+restrictions on 3rd party libs?
+logging console?
+Implements issue?
+running adb?
+sample apps (can't find them)?
+
+
+
+Day 3 - zippy android apps
+
+android 101 slides
+
+tools: 
+AsyncTask (this task is subject to termination policy)
+android.app.IntentService (this task will complete)
+
+non-jank related tools:
+traceview
+logcat
+
+

@@ -1,0 +1,45 @@
+
+Dennis ? - only person in eBay SEO
+seo office hours: Wed. 3-4 first floor collectibles
+
+
+http://janeandrobot.ocm
+
+=head1 questions
+
+how to you best expose a site to a search engine that has multiple version of
+the site for eaxh language?
+
+=head1 crawling
+
+link from home
+xml sitemaps
+use of 304
+crawl delay
+use GWT crawl settings
+long urls
+session ids
+dups
+404s
+redirect when appropriate
+301 vs 302
+js redirects
+use noscript tags
+turn off images and js and browse to get an engine's point of view
+
+avoid lots of params in url (use less than 5)
+avoid the calendar indexing problem (next link)
+don't rewrite for the same url
+
+=head1 indexing
+
+h1 tells engine the subject (use on each page)
+/uri/mp3-players -- looked at as 2 words
+/uri/mp3_players -- looked at as 1 work
+cloaking ??? don't do it ... gbh, i believe, gbh wants cloaking
+
+indexing multiple languages
+
+=head1 ranking
+
+alexa 
