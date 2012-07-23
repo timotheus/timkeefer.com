@@ -253,15 +253,15 @@ Scaling Django at Mozilla
 -------------------------
 
 * statsd navagition timing "stick"
-* jingo for css minification
-* cache-machine model level caching
+* jingo - css minification
+* cache-machine - model level caching
 * elastic search
-* celery
+* celery - message queue
 * model.objects.values_list used to process large querysets in chunks
 * django-toolbar
 * queryset transform reduces large query counts
-* mysql pooling was a big win
-* django-waffle
+* mysql pooling was a big win (coming in django 1.5)
+* django-waffle - wire on/off mechanism
 * udp to sentry
 * django-mysql-pool
 
@@ -279,11 +279,9 @@ Vagrant
   #. host only
 
 
+ql.io
+=====
 
-  
-
-
-
-
+* eBay open-sourced tool that aggregates multiple API calls into one
 
 
