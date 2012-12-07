@@ -1,0 +1,20 @@
+12/6/2013 - Mobile Panel at PayPal
+
+Almaer - titanium
+  * good example, the NBC app
+
+Elias - sencha
+  * newyork times, zero are good examples 
+  * http://www.sencha.com/products/touch/demos/
+
+Hurst - VP mobile eBay
+  * 10B in GMV, 1.2M new users per year
+
+Charland - Adobe/PhoneGap
+  * untapped, mafia wars, feedly (favorite phonegap apps) 
+  * release to the apache foundation as Cordova (aka, phonegap)
+  * monthly phonegap releases
+
+Kaneda - JQTouch, Benchmark Capital
+
+Facebook HTML5 debacle - poorly written and calls were xml based
