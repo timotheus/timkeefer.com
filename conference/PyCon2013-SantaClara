@@ -1,0 +1,128 @@
+PyCon 2013 - Santa Clara
+------------------------
+https://speakerdeck.com/pyconslides
+
+
+## Keynotes
+
+- Raspberrypi http://raspberrypi.io
+- Khan Academy http://www.khanacademy.org 
+- MagPi http://www.themagpi.com
+
+## Sessions
+
+* API Design
+  - Subclassing and overide is an outdate API pattern
+  - globalstate is precious
+  - Iterators	
+
+	enumerate()
+	izip()
+	xrange()
+	for block in iter(partial(f.read, 32), ''):
+		print block
+
+	for k, v in dict.iteritems():
+  		print k, v
+
+	d = dict(izip(array1, array2))
+
+	a = ['tim', 'sam', 'susan']
+	for name in names:
+		key = len(name)
+		d.setdefault(key, []).append(name)
+
+	a = ChainMap(dict1, dict2, dict3)
+	deque() instead of pop, insert
+
+  - Other
+	first,  *rest = range(10)
+  - Contextmanager - when you have setup and teardown logic
+
+* Instagram
+
+  web -> broker -> worker
+                -> worker
+                -> worker
+
+  - redis, stores media ids
+  - chained tasks to distribute 
+  - Gearman & Python - failed
+  - Celery - RabbitMQ 3.0
+    mirrored broker nodes
+    gevent (anything network bound), pre-fork
+    seperate tasks into fast and slow
+    worker crashes still lose tasks
+    publisher confirm modes - prevents dropped tasks (perf hit, but good to have)
+    CELERYD_TASK_SOFT_TIME_LIMIT=2-
+
+  - Sensu - alerting
+  - 4K tasks /sec
+
+* Mobile Testing with Selenium and Python
+  - * don't use selenium RC, use webdriver
+  - webdriver
+	iOS and Android drivers
+	script -> SE server -> SE driver (Android) -> app
+
+  - mobile uses a "remote" web driver
+
+	config['platform'] = ''
+	config['browser'] = 'android'
+	# or config['browser'] = 'iphone'
+	# must define the remote host
+	webdriver.Remote('http://../wd/hub', config)
+
+  - requires android SDK, port forwarding, 
+    adb debugger setup.. lots of work
+
+  - http://github.com/appium
+  - Appium for iOS
+  - Appium for Android
+
+* Porting Django 1.5> apps to Python 3
+  - by Jacob
+  - django compressor
+  - django social auth
+  - django discover runner
+  - django site tree
+  - django.me/py3
+
+* Session management
+  - http://socket.io
+  - http://codysoyland.com/2011/feb/6/evented-django-part-one-socketio-and-gevent/
+
+* Deployment from hynek.me
+  - pingdom - free monitoring
+  - FPM for packaging native packages (rpm, deb, etc) 
+
+* Asset Management
+  - webassets https://github.com/miracle2k/webassets
+
+* Home automation w/ raspberrypi
+  - pyserial, GPIO, fswebcam, twillo
+  - edimax nano (usb wifi)
+  - minidlna - uPNP for media (allows DVD to tie to movies and music)
+  - openvpn
+  Need: HDMI2DVI, breadboard, bus hardware, wires, resisters, usb wifi
+
+
+* Profiling 
+  - cProfile 
+  - Runsnakerun http://www.vrplumber.com/programming/runsnakerun/   
+
+* Distributed communication w/ Zookeeper
+  - kazoo https://github.com/python-zk/kazoo
+  - can store django settings in zookeeper
+  - jitter (used instead of a simple sleep() and retry)
+  - fully redundant alternative to redis
+
+* Logging 
+  - By Gavin 
+  - https://github.com/gmr/pycon2013-logging
+
+* MongoDB
+  - no joins
+  - geospacial (look into for solar project)
+  - gridfs (look into for file storage)
+
