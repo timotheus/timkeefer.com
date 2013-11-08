@@ -1,0 +1,108 @@
+Instagram
+---------
+
+web -> broker -> worker
+              -> worker
+              -> worker
+
+* redis - stores media ids
+
+
+* chained tasks to distribute 
+
+* Gearman & Python - failed
+* Celery - RabbitMQ 3.0
+  - mirrored broker nodes
+  - gevent (anything network bound), pre-fork
+  - seperate tasks into fast and slow
+  - worker crashes still lose tasks
+  - publisher confirm modes - prevents dropped tasks (perf hit, but good to have)
+  - CELERYD_TASK_SOFT_TIME_LIMIT=2-
+
+* Sensu - altering
+* graphite & statsd
+* 4K tasks /sec
+
+
+API Design
+
+1. globalstate is precious
+2. don't design exclusively
+
+
+first,  *rest = range(10)
+
+
+enumerate()
+izip()
+xrange()
+for block in iter(partial(f.read, 32), ''):
+	print block
+
+for k, v in dict.iteritems():
+  print k, v
+
+d = dict(izip(array1, array2))
+
+a = ['tim', 'sam', 'susan']
+for name in names:
+	key = len(name)
+	d.setdefault(key, []).append(name)
+
+a = ChainMap(dict1, dict2, dict3)
+deque() instead of pop, insert
+
+@cache
+
+contextmanager - when you have setup and teardown logic
+
+minidlna - uPNP for media
+openvpn
+
+
+Mobile Testing with Selenium and Python
+---------------------------------------
+
+* don't use selenium RC, use webdriver
+
+webdriver
+- iOS and Android drivers
+
+script -> SE server -> SE driver (Android) -> app
+
+- mobile is a "remote" web driver
+
+config['platform'] = ''
+config['browser'] = 'android'
+# or config['browser'] = 'iphone'
+
+# must define the remote host
+webdriver.Remote('http://../wd/hub', config)
+
+# requires android SDK, port forwarding, adb debugger setup.. lots of work
+
+Appium for iOS
+Appium for Android
+
+github.com/appium
+
+
+Porting Django 1.5> apps to Python 3
+------------------------------------
+by Jacob
+
+django compressor
+django social auth
+django discover runner
+django site tree
+
+django.me/py3
+
+https://speakerdeck.com/pyconslides
+
+
+
+
+
+
+

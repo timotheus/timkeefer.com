@@ -1,0 +1,28 @@
+Raptor CMS
+==========
+
+Higgs - Raptor pipeline/proxy
+	
+	- UI Modules
+		a) eBay Filmstrip - item display on daily deals
+		b) RTM
+		c) Global header / footer
+	
+	- Marketplace Functionality
+		a) CORP authN
+		b) CAL
+		c) Page designer
+		d) EWA
+		e) Resource repo
+
+	- Customers
+		a) ebayinc.com
+		b) stories
+		c) 
+
+	- Roadmap
+		a) DS3 client-side components
+		b) Piwik (GA alternative)
+		c) 
+
+	- SRP, use ?_showdiag=1 to grab json search string

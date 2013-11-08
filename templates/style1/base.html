@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>
+            Tim Keefer
+        </title>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+        rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+        <script src="/js/main.js"></script>
+        <script
+          src="http://maps.googleapis.com/maps/api/js?v=3.10&sensor=false">
+        </script>
+
+        <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/home.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="/images/favicon.ico">
+
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Crushed' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Gravitas+One' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic' rel='stylesheet' type='text/css' />
+
+        <script type="text/javascript" src="/js/scripts.js"></script>
+
+        {% block head_extra %}
+        {% endblock %}
+        
+    </head>
+
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top" style="margin: 0px 0px 10px 0px;">
+          
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="/" class="navbar-brand">
+                <div id="tile1" class="tile" onclick="window.location='/';"> </div>
+              </a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  
+                </li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/changes/">Changes</a>
+                </li>
+                <li>
+                  <a href="/open-source/">Open-Source</a>
+                </li>
+                <li>
+                  <a href="/shapes/">CSS3 Shapes</a>
+                </li>
+
+                <!-- li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Apply&nbsp;<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/signup/1">Student</a>
+                    </li>
+                    <li>
+                      <a href="/signup/2">Business</a>
+                    </li>
+                    <li>
+                      <a href="/signup/3">Nonprofit Organization</a>
+                    </li>
+                    <li class="divider">
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                  </ul>
+                </li -->
+              </ul>  
+            </div>
+            <!--/.navbar-collapse -->
+          
+        </div>
+
+        {% block content %}{% endblock %}
+
+      <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+          <div class="col-md-12">
+            <hr />
+      <footer>
+        <p>
+          © Tim Keefer 2013
+        </p>
+      </footer>
+      </div></div>  
+  </div>
+
+  <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+      _uacct = "UA-249892-2";
+      urchinTracker();
+  </script>
+    </body>
+</html>
