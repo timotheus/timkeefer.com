@@ -5,6 +5,17 @@ body {
   padding-bottom: 20px
 }
 
+#gh-bt {
+    position: fixed;
+    width: 32px;
+    height: 35px;
+    right: -50px;
+    bottom: 60px;
+    overflow: hidden;
+    z-index: 9;
+
+}
+
 a:link { color: #d59c11 }
 a:visited { color: #aaa164 }
 
@@ -412,11 +423,18 @@ a:visited { color: #aaa164 }
 
 
 @media (max-width: 480px) {
+    #tile2, #tile3, #tile4 {
+        width: 95%;
+    }
     .changes #col2 {
         margin-left: 50px;
     }
     .changes #col2 img {
         width: 200px;
+    }
+    .col-md-4, .col-md-8, .col-md-12 {
+        padding-left: 0;
+        padding-right: 5px;
     }
 }
 
@@ -435,5 +453,9 @@ a:visited { color: #aaa164 }
     }
     .changes #col2 img {
         width: 200px;
+    }
+    body {
+        padding-right: 0px;
+        padding-left: 0px;
     }
 }
